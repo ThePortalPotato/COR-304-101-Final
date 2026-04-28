@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 24331033}
   - component: {fileID: 24331032}
   - component: {fileID: 24331038}
+  - component: {fileID: 24331039}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -183,6 +184,12 @@ MonoBehaviour:
   playerCamera: {fileID: 330585545}
   sens: 100
   moveSpeed: 1
+  audioClips:
+  - {fileID: 8300000, guid: 68620e57089cb074bbcd9c482ebd6f9b, type: 3}
+  - {fileID: 8300000, guid: e1077a7df46473c4fbb0c3836409cc0f, type: 3}
+  - {fileID: 8300000, guid: 09a580f801d4121469daeeb397d97119, type: 3}
+  audioSource: {fileID: 24331039}
+  audioVolume: 100
 --- !u!136 &24331034
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -291,6 +298,103 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8601ebd4a39f2438119f2f63981535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InputSubscription
+--- !u!82 &24331039
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24331031}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 3e321cb06f0f3ab4b835aca36f4c4ef6, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &53053511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -812,11 +916,11 @@ PrefabInstance:
       propertyPath: m_text
       value: 'The Monkey King
 
-        
 
-        A large concrete sculpture created
-        by Tin Neon Pang depicting a scene from Chinese mythology. The adjacent wall
-        and nearby fire-hydrant are covered in several tags.'
+
+        A large concrete sculpture created by Tin
+        Neon Pang depicting a scene from Chinese mythology. The adjacent wall and
+        nearby fire-hydrant are covered in several tags.'
       objectReference: {fileID: 0}
     - target: {fileID: 7896659683744870079, guid: 0aec5d6408eeaf141b4bb4d8a6065bfd, type: 3}
       propertyPath: m_Pivot.x
@@ -1005,7 +1109,7 @@ PrefabInstance:
         This mural has been plagued by graffiti tags since before it was even completed,
         sparking outrage from the community.
 
-        
+
 
         Source: https://montreal.citynews.ca/2024/09/04/asian-night-market-wraps-with-mural-in-chinatown/
 
